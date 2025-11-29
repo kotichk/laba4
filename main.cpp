@@ -1,4 +1,7 @@
 #include <iostream>
+
+#include "functions_2_3.h"
+
 #include <vector>
 #include <string>
 #include <fstream>
@@ -6,11 +9,11 @@
 
 using namespace std;
 
-vector<string> readLine(string fileName) { //читает из текстового файла набор строк в вектор (функция № 1)
+vector<string> readLine(string fileName) { //Г·ГЁГІГ ГҐГІ ГЁГ§ ГІГҐГЄГ±ГІГ®ГўГ®ГЈГ® ГґГ Г©Г«Г  Г­Г ГЎГ®Г° Г±ГІГ°Г®ГЄ Гў ГўГҐГЄГІГ®Г° (ГґГіГ­ГЄГ¶ГЁГї В№ 1)
     vector<string> lines;
     ifstream file(fileName);
     if (!file.is_open()) {
-        cout << "Ошибка, файл не найден" << endl;
+        cout << "ГЋГёГЁГЎГЄГ , ГґГ Г©Г« Г­ГҐ Г­Г Г©Г¤ГҐГ­" << endl;
         return lines;
     }
     string line;
@@ -20,27 +23,37 @@ vector<string> readLine(string fileName) { //читает из текстового файла набор ст
     file.close();
 
     if (lines.empty()) {
-        cout << "Файл пустой" << endl;
+        cout << "Г”Г Г©Г« ГЇГіГ±ГІГ®Г©" << endl;
     }
     else {
-        cout << "Количество строк: " << lines.size() << endl;
+        cout << "ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г®ГЄ: " << lines.size() << endl;
     }
 
     return lines;
 }
 
-void printLine(vector<string> lines) { //выводит эти строки на экран (функция № 2)
+void printLine(vector<string> lines) { //ГўГ»ГўГ®Г¤ГЁГІ ГЅГІГЁ Г±ГІГ°Г®ГЄГЁ Г­Г  ГЅГЄГ°Г Г­ (ГґГіГ­ГЄГ¶ГЁГї В№ 2)
 
 }
 
-void writeToFile(vector<string> lines, string fileName) { //записывает их файл (функция № 3)
+void writeToFile(vector<string> lines, string fileName) { //Г§Г ГЇГЁГ±Г»ГўГ ГҐГІ ГЁГµ ГґГ Г©Г« (ГґГіГ­ГЄГ¶ГЁГї В№ 3)
 
 }
 
 int main()
 {
+
+    cout << "Hello world!" << endl;
+    cout << "\n ГђВ’Г‘В‹ГђВ·ГђВѕГђВІ Г‘В„Г‘ВѓГђВЅГђВєГ‘В†ГђВёГђВё 2" << endl;
+function2();
+
+cout << "\n ГђВ’Г‘В‹ГђВ·ГђВѕГђВІ Г‘В„Г‘ВѓГђВЅГђВєГ‘В†ГђВёГђВё 3" << endl;
+function3();
+    return 0;
+
     setlocale(LC_ALL, "Russian");
     vector<string> lines = readLine("inFile.txt");
     printLine(lines);
     writeToFile(lines, "outFile.txt");
+
 }
