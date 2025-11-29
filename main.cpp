@@ -19,6 +19,7 @@ void writeToFile(vector<string> lines, string fileName) { //записывает их файл (
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
     vector<string> lines = readLine("inFile");
     printLine(lines);
     writeToFile(lines, "outFile.txt");
