@@ -9,11 +9,11 @@
 
 using namespace std;
 
-vector<string> readLine(string fileName) { //÷èòàåò èç òåêñòîâîãî ôàéëà íàáîð ñòðîê â âåêòîð (ôóíêöèÿ ¹ 1)
+vector<string> readLine(string fileName) { //reads a set of lines into a vector from a text file (function #1)
     vector<string> lines;
     ifstream file(fileName);
     if (!file.is_open()) {
-        cout << "Îøèáêà, ôàéë íå íàéäåí" << endl;
+        cout << "File not found" << endl; //Russian is not displayed correctly
         return lines;
     }
     string line;
@@ -23,37 +23,31 @@ vector<string> readLine(string fileName) { //÷èòàåò èç òåêñòîâî�
     file.close();
 
     if (lines.empty()) {
-        cout << "Ôàéë ïóñòîé" << endl;
+        cout << "File is empty" << endl;
     }
     else {
-        cout << "Êîëè÷åñòâî ñòðîê: " << lines.size() << endl;
+        cout << "Number of lines: " << lines.size() << endl;
     }
 
     return lines;
 }
 
-void printLine(vector<string> lines) { //âûâîäèò ýòè ñòðîêè íà ýêðàí (ôóíêöèÿ ¹ 2)
-
-}
-
-void writeToFile(vector<string> lines, string fileName) { //çàïèñûâàåò èõ ôàéë (ôóíêöèÿ ¹ 3)
-
-}
-
 int main()
 {
+    setlocale(LC_ALL, "Russian");
+
+    vector<string> lines = readLine("inFile.txt");
 
     cout << "Hello world!" << endl;
     cout << "\n ÐÑÐ·Ð¾Ð² ÑÑÐ½ÐºÑÐ¸Ð¸ 2" << endl;
-function2();
+    function2();
 
-cout << "\n ÐÑÐ·Ð¾Ð² ÑÑÐ½ÐºÑÐ¸Ð¸ 3" << endl;
-function3();
+    cout << "\n ÐÑÐ·Ð¾Ð² ÑÑÐ½ÐºÑÐ¸Ð¸ 3" << endl;
+    function3();
+
+
+    //printLine(lines);
+    //writeToFile(lines, "outFile.txt");
+
     return 0;
-
-    setlocale(LC_ALL, "Russian");
-    vector<string> lines = readLine("inFile.txt");
-    printLine(lines);
-    writeToFile(lines, "outFile.txt");
-
 }
