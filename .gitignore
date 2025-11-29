@@ -3,3 +3,6 @@
 .layout
 .txt
 .o
+bin/
+obj/
+
