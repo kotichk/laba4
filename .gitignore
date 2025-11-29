@@ -1,0 +1,6 @@
+.o
+bin/
+obj/
+.exe
+.cbp
+.layout
