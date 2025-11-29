@@ -9,12 +9,23 @@ using namespace std;
 vector<string> readLine(string fileName) { //читает из текстового файла набор строк в вектор (функция № 1)
     vector<string> lines;
     ifstream file(fileName);
+    if (!file.is_open()) {
+        cout << "Ошибка, файл не найден" << endl;
+        return lines;
+    }
     string line;
     while (getline(file, line)) {
         lines.push_back(line);
     }
     file.close();
-    cout << "Количество строк: " << lines.size() << endl;
+
+    if (lines.empty()) {
+        cout << "Файл пустой" << endl;
+    }
+    else {
+        cout << "Количество строк: " << lines.size() << endl;
+    }
+
     return lines;
 }
 
