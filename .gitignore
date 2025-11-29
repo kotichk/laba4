@@ -1,6 +1,5 @@
-.o
-bin/
-obj/
-.exe
 .cbp
+.depend
 .layout
+.txt
+.o
