@@ -6,28 +6,26 @@
 using namespace std;
 
 void function2() {
-    cout << "=== Функция 2 ===" << endl;
+    cout << "    Function 2    " << endl;
     
-    // Временные данные для отладки
     vector<int> numbers = {1, 2, 3, 4, 5};
-    cout << "Обработка числовых данных:" << endl;
+    cout << "Processing of numerical data:" << endl;
     
     int sum = 0;
     for (int num : numbers) {
-        cout << "Число: " << num << endl;
+        cout << "Number: " << num << endl;
         sum += num;
     }
-    cout << "Сумма чисел: " << sum << endl;
+    cout << "The sum of the numbers: " << sum << endl;
 }
 
 void function3() {
-    cout << "=== Функция 3 ===" << endl;
-    
-    // Временные данные для отладки
+    cout << "    Function 3    " << endl;
+
     vector<string> items = {"apple", "banana", "orange"};
-    cout << "Обработка строковых данных:" << endl;
+    cout << "String data processing:" << endl;
     
     for (const auto& item : items) {
-        cout << "Элемент: " << item << " (длина: " << item.length() << ")" << endl;
+        cout << "Element: " << item << " (length: " << item.length() << ")" << endl;
     }
 }

@@ -39,10 +39,10 @@ int main()
     vector<string> lines = readLine("inFile.txt");
 
     cout << "Hello world!" << endl;
-    cout << "\n ÐÑÐ·Ð¾Ð² ÑÑÐ½ÐºÑÐ¸Ð¸ 2" << endl;
+    cout << "\n Calling function 2" << endl;
     function2();
 
-    cout << "\n ÐÑÐ·Ð¾Ð² ÑÑÐ½ÐºÑÐ¸Ð¸ 3" << endl;
+    cout << "\n Calling function 3" << endl;
     function3();
 
 
